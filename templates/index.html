@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prediction The Home Loan</title>
+
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        header {
+            background-color: #cadbdb;
+            color: rgb(16, 14, 14);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+    font-size: 42px;
+    color: #141212; /* White for better contrast */
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; /* Modern and professional font */
+    letter-spacing: 1px; /* Slight spacing for better readability */
+    text-transform: uppercase; /* Adds a professional touch */
+    background: linear-gradient(45deg, #c0e7f0, #c9def0); /* Gradient effect */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+        header img {
+            width: 90px;
+            height: 90px;
+            border-radius: 30%;
+            margin-right: 10px;
+        }
+
+        /* Hero Section */
+        section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            border-bottom: 3px solid #ffffff;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            color: #696767;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            color: #696767;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-content img {
+    width: 60%;      /* Ensures the image takes full width of its container */
+    height: 50%;     /* Ensures the image takes full height of its container */
+    object-fit: contain;  /* Ensures the image maintains its aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+        /* Loan Prediction Form */
+        form {
+            background-color: #2d3748;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .form-title {
+            font-size: 2.3rem;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        /* Styling for the unordered list */
+ul.list-disc {
+    list-style-type: disc; /* Ensures bullet points appear */
+    margin-left: 20px; /* Provides spacing from the left */
+    padding-left: 15px;
+}
+
+/* Styling for each list item */
+ul.list-disc li {
+    font-size: 1; /* Adjust text size */
+    color: #010101; /* Light gray color for readability */
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 6px; /* Adds spacing between list items */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+
+
+        .form-description {
+            font-size: 1.2rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-fields label {
+            font-size: 1.3rem;
+            color: #2d3748;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-fields input {
+            width: 50%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ffffff;
+            background-color: #fafafa;
+            font-size: 1.2rem;
+            color: #2d3748;
+        }
+
+        .form-fields input:focus {
+            border-color: #3182ce;
+            outline: none;
+        }
+
+        .form-button {
+            background-color: #3182ce;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-button:hover {
+            background-color: #2b6cb0;
+        }
+
+        /* Prediction Result Section */
+        .prediction-result {
+            background-color: #dde0e5;
+            color: rgb(8, 7, 7);
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .prediction-result h2 {
+            font-size: 2rem;
+            color: #1b1f24;
+        }
+
+        .prediction-result p {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #054563;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d2631;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #aabed9;
+            margin: 0 15px;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #3182ce;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header a {
+                font-size: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .form-fields label,
+            .form-fields input {
+                font-size: 1rem;
+            }
+
+            .form-button {
+                font-size: 1rem;
+            }
+
+            .prediction-result h2 {
+                font-size: 1.5rem;
+            }
+
+            .prediction-result p {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 0.875rem;
+            }
+
+            .form-fields input {
+                font-size: 0.875rem;
+            }
+
+            .form-button {
+                font-size: 1rem;
+            }
+
+            .prediction-result h2 {
+                font-size: 1.25rem;
+            }
+
+            .prediction-result p {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href="/" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="/static/images/ic1.png" alt="logo" class="w-12 h-12 p-2 rounded-full">
+                <span class="ml-3 text-xl font-semibold">Predictive Analytics for Home Loan Approvals</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Smart Home Loan Eligibility Prediction</h1>
+            <p>Provide the necessary details, and let our AI-powered Decision Tree model assess your home loan approval chances with precision. Gain insights instantly and plan your next steps confidently!</p>
+            <img src="/static/images/k2.jpg" alt="Loan Prediction Image">
+        </div>
+    </section>
+
+    <!-- Loan Prediction Form -->
+    <form action="/" method="POST">
+        <section class="text-gray-400 bg-gray-900 body-font">
+            <div class="container px-5 py-20 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="form-title">Loan Prediction Form</h1>
+                    <p class="form-description">Enter your details accurately to ensure the most reliable loan approval prediction.</p>
+                    <p class="text-indigo-500 sm:text-3xl text-2xl">Parameters:</p><br>
+                    <ul class="list-disc text-left ml-6 text-gray-200">
+                        <li>Gender (male=1, female=0)</li>
+                        <li>Marital Status (married=1, unmarried=0)</li>
+                        <li>Education (educated=1, uneducated=0)</li>
+                        <li>Self Employed (yes=1, no=0)</li>
+                        <li>Applicant Income (example=2342 --monthly--)</li>
+                        <li>Self Coapplicant Income (example = 0.0)</li>
+                        <li>Loan Amount (example = 23423.23)</li>
+                        <li>Loan Amount Term (example = 360 --days--)</li>
+                        <li>Credit History (example=1.0)</li>
+                        <li>Property Area (urban = 2 , semiurban=1 , rural=0)</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-full lg:w-2/3 xl:w-1/2">
+                        <div class="form-fields">
+                            <label for="gender">Gender</label>
+                            <input type="text" id="gender" name="gender" required>
+
+                            <label for="married">Marital Status</label>
+                            <input type="text" id="married" name="married" required>
+
+                            <label for="education">Education</label>
+                            <input type="text" id="education" name="education" required>
+
+                            <label for="employed">Self Employed</label>
+                            <input type="text" id="employed" name="employed" required>
+
+                            <label for="app_income">Applicant Income</label>
+                            <input type="text" id="app_income" name="app_income" required>
+
+                            <label for="self_co_income">Self Coapplicant Income</label>
+                            <input type="text" id="self_co_income" name="self_co_income" required>
+
+                            <label for="loan_amount">Loan Amount</label>
+                            <input type="text" id="loan_amount" name="loan_amount" required>
+
+                            <label for="loan_term">Loan Amount Term</label>
+                            <input type="text" id="loan_term" name="loan_term" required>
+
+                            <label for="credit_history">Credit History</label>
+                            <input type="text" id="credit_history" name="credit_history" required>
+
+                            <label for="property_area">Property Area</label>
+                            <input type="text" id="property_area" name="property_area" required>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="form-button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Prediction Result -->
+    <section class="prediction-result">
+        <div class="container mx-auto text-center">
+            <h2>Predicted Result</h2>
+            <p>{{pred}}</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Home Loan Prediction. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
