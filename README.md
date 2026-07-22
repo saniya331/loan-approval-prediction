@@ -107,13 +107,17 @@ _Add screenshots of your application here._
 - **Library:** Scikit-learn
 - **Model Storage:** Joblib (`model.pkl`)
 
-## 🚀 Future Improvements
+
+  ## 🚀 Future Enhancements
 
 - Improve prediction accuracy using advanced machine learning models.
-- Add user authentication and store application history.
-- Integrate document upload for loan applications.
+- Add user authentication and application history.
+- Store data in a MySQL database.
+- Integrate document upload and verification.
 - Provide AI-based explanations for prediction results.
-- Connect with real-world banking APIs for enhanced functionality.
+- Develop a REST API for external integration.
+- Deploy using Docker and cloud platforms.
+- Integrate real-world banking APIs.
 
 ## 👩‍💻 Author
 
